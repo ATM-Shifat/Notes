@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="50dp"
+        android:id="@+id/log_in_icon"
+        android:src="@drawable/log_in"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/log_in_text"
+        android:layout_below="@+id/log_in_icon"
+        android:layout_marginBottom="20dp"
+        android:text="Let's Get Inside"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/log_in_form"
+        android:orientation="vertical"
+        android:layout_below="@id/log_in_text"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="30dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/log_in_email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/log_in_email"
+            android:id="@+id/log_in_password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="monospace"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/log_in_button"
+            android:text="Log In"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="monospace"
+            android:textSize="20sp"
+            />
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/log_in_form"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="30dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/sign_up_text"
+            android:text="Signup"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
